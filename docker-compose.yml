@@ -1,0 +1,38 @@
+version: '3.5'
+services:
+    mysql:
+        container_name: mysql_design_patterns
+        image: mysql:latest
+        restart: on-failure
+        environment:
+            MYSQL_DATABASE: design_patterns
+            MYSQL_USER: root
+            MYSQL_PASSWORD: root
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3300:3306
+        volumes:
+          - ./docker/volumes/mysql/data:/var/lib/mysql
+    php:
+        container_name: php_design_patterns
+        build: ./docker/build/php
+        tty: true
+        environment:
+          PHP_IDE_CONFIG: serverName=php_design_patterns
+          XDEBUG_CONFIG: remote_host=${HOST_IP}
+        depends_on:
+            - mysql_design_patterns
+        volumes:
+          - .:/var/www/design-patterns
+    nginx:
+        container_name: nginx_design_patterns
+        image: nginx:latest
+        restart: on-failure
+        ports:
+          - 8888:80
+        volumes:
+          - ./:/var/www/design-patterns
+          - ./docker/build/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+          - php_design_patterns
+          - mysql_design_patterns
