@@ -2,20 +2,9 @@
 
 namespace App\Structural\Composite\Equipment;
 
-class Chassis extends Equipment
+class Chassis extends CompositeEquipment
 {
-    public function wattPower(): int
-    {
-        return 3;
-    }
-
-    public function netPrice(): int
-    {
-        return 175;
-    }
-
-    public function discountPrice(): int
-    {
-        return 50;
-    }
+    protected int $wattPower = 1;
+    protected int $netPrice = 175;
+    protected int $discountPrice = 50;
 }

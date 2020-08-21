@@ -16,8 +16,7 @@ class CompositeEquipment extends Equipment
 
     public function wattPower(): int
     {
-        $total = 0;
-
+        $total = $this->wattPower;
         foreach ($this->children as $child) {
             $total += $child->wattPower();
         }
@@ -27,8 +26,7 @@ class CompositeEquipment extends Equipment
 
     public function netPrice(): int
     {
-        $total = 0;
-
+        $total = $this->netPrice;
         foreach ($this->children as $child) {
             $total += $child->netPrice();
         }
@@ -38,10 +36,19 @@ class CompositeEquipment extends Equipment
 
     public function discountPrice(): int
     {
-        $total = 0;
-
+        $total = $this->discountPrice;
         foreach ($this->children as $child) {
             $total += $child->discountPrice();
+        }
+
+        return $total;
+    }
+
+    public function namesList(): string
+    {
+        $total = $this->getName();
+        foreach ($this->children as $child) {
+            $total .= ' | ' . $child->namesList();
         }
 
         return $total;

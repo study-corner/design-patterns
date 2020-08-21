@@ -2,20 +2,9 @@
 
 namespace App\Structural\Composite\Equipment;
 
-class Cabinet extends Equipment
+class Cabinet extends CompositeEquipment
 {
-    public function wattPower(): int
-    {
-        return 5;
-    }
-
-    public function netPrice(): int
-    {
-        return 150;
-    }
-
-    public function discountPrice(): int
-    {
-        return 25;
-    }
+    protected int $wattPower = 1;
+    protected int $netPrice = 150;
+    protected int $discountPrice = 25;
 }
