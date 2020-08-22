@@ -2,16 +2,17 @@
 
 namespace App\Command\Structural\Composite;
 
-use App\Structural\Composite\Conceptual\Component;
-use App\Structural\Composite\Conceptual\Composite;
-use App\Structural\Composite\Conceptual\Leaf;
+use App\Structural\Composite\Refactor\Component;
+use App\Structural\Composite\Refactor\Composite;
+use App\Structural\Composite\Refactor\Leaf;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ConceptualCommand extends Command
+class RefactorCommand extends Command
 {
-    public static string $name = 'structural:conceptual';
+    public static string $name = 'structural:refactor
+    ';
 
     private OutputInterface $output;
 

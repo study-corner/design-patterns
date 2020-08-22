@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Structural\Composite\Conceptual;
+namespace App\Structural\Composite\Refactor;
 
 abstract class Component
 {
