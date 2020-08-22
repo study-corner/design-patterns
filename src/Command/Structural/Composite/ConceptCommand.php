@@ -13,7 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ConceptCommand extends Command
 {
-    public static string $name = 'structural:concept';
+    public static string $name = 'structural:composite:concept';
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {

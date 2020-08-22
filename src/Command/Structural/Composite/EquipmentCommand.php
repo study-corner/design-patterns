@@ -15,7 +15,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class EquipmentCommand extends Command
 {
-    public static string $name = 'structural:equipment';
+    public static string $name = 'structural:composite:equipment';
 
     private OutputInterface $output;
 

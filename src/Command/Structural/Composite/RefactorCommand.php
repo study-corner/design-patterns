@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class RefactorCommand extends Command
 {
-    public static string $name = 'structural:refactor
+    public static string $name = 'structural:composite:refactor
     ';
 
     private OutputInterface $output;
