@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Structural\Composite\Lexi;
+namespace App\Lexi;
 
 class Point
 {
