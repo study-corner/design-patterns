@@ -26,7 +26,7 @@ class Booking
     {
         $result = $this->show->getPrice();
         if ($this->isPeakDay()) {
-            $result += round($result * 0.15);
+            $result += round($result * 0.15, 2);
         }
 
         return $result;

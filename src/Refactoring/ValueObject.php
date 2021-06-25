@@ -15,6 +15,6 @@ class ValueObject
 
     public function hasOwnProperty(string $property): bool
     {
-        return in_array($property, $this->properties);
+        return array_key_exists($property, $this->properties);
     }
 }
