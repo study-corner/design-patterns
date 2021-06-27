@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Refactoring;
+namespace App\Tests\Refactoring\Booking;
 
-use App\Refactoring\Booking;
-use App\Refactoring\Extras;
-use App\Refactoring\PremiumBooking;
-use App\Refactoring\Show;
+use App\Refactoring\Booking\Extras;
+use App\Refactoring\Booking\PremiumBooking;
+use App\Refactoring\Booking\Show;
 use PHPUnit\Framework\TestCase;
 
 class PremiumBookingTest extends TestCase

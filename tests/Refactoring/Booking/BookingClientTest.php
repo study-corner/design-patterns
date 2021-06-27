@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Refactoring;
+namespace App\Tests\Refactoring\Booking;
 
-use App\Refactoring\BookingClient;
+use App\Refactoring\Booking\BookingClient;
 use PHPUnit\Framework\TestCase;
 
 class BookingClientTest extends TestCase
